@@ -4,37 +4,82 @@
   box-sizing: border-box;
 }
 
-.song {
-  margin-bottom: 20px;
-}
-
-.song a {
-  text-decoration: none;
-  color: black;
+.header {
+  font-family: 'Audiowide';
+  font-size: 60px;
+  line-height: 52px;
+  letter-spacing: -.08em;
+  width: 40%;
+  margin: 9%;
+  color: rgba(0,0,0,.8);
+  background: url("assets/loose-tobacco.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .landing-container {
-  font-size: 0px;
+  font-size: 0;
 }
 
 .list-container, .song-container {
-  width: 50%;
   display: inline-block;
   font-size: 20px;
   vertical-align: top;
 }
 
-.admin {
-  font-size: 40px;
+.song-container {
+  width: 60%;
+}
+
+.list-container {
+  width: 40%;
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  cursor: pointer;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  overflow: scroll;
+  background-color: RGB(84, 224, 69)
+}
+
+.song {
+  margin: 20px;
+  padding-bottom: 10px;
   color: white;
-  text-shadow: 1px 1px #AAA;
+  text-shadow: 1px 1px RGB(9, 183, 0);
+  border-bottom: solid 1px white;
+  font-family: "Abel";
+}
+
+.song-container {
+  color: white;
+  text-shadow: 1px 1px RGB(9, 183, 0);
+  font-family: "Abel";
+  background: rgb(11, 226, 0);
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  transition: height 1s;
+}
+
+.song-info, .control-panel {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.admin {
+  font-size: 30px;
+  color: #EEE;
+  cursor: pointer;
+  text-shadow: 1px 1px #ccc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+a .admin {
+  text-decoration: none;
 }
 
 .admin:hover {
-  color: #EEE;
-  text-shadow: 0px 0px 2px black;
+  color: gray;
 }

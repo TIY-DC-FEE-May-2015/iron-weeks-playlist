@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html ng-app="playlistApp">
-  <head>
-    <title>Iron Week's Playlist</title>
-    <link href="playlist.css" rel="stylesheet" />
-  </head>
-  <body>
+<head>
+  <title>Playlist App</title>
+  <script src="libs/angular.js"></script>
+  <link rel="stylesheet" type="text/css" href="playlist.css">
+  <link rel="shortcut icon" href="assets/cake.ico" type="image/x-icon" />
+  <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+</head>
+<body >
 
-    <div ng-controller="PageController">
-      <div class="header">
-      </div>
+  <div ng-controller="PageController"> <!-- just for using vents -->
 
-      <div ng-view></div>
-
-      <a href="#admin">
-        <div class="admin">⚙</div>
-      </a>
+    <div class="header">
+      Let's play some fucking songs!
+<!--      <a href="#song">Go to Song</a>
+      <a href="#list">Go to List</a>
+      <a href="#admin">Go to Admin </a> -->
     </div>
 
-    
-    <script src="libs/angular.js"></script>
-    <script src="libs/angular-route.js"></script>
-    <script src="libs/howler.js"></script>
-    
-    <script src="adminCtrl.js"></script>
-    <script src="listCtrl.js"></script>
-    <script src="pageCtrl.js"></script>
-    <script src="songCtrl.js"></script>
-    <script src="index.js"></script>
-    
-  </body>
+    <div ng-view><!-- sets up the content - this is where template goes-->
+    </div>
+
+    <a href="#admin"><div class="admin">GEAR</div></a>
+
+  </div>
+
+
+  <script src="libs/angular-route.js"></script>
+  <script src="libs/howler.js"></script>
+  <script type="text/javascript" src="listCtrl.js"></script>
+  <script type="text/javascript" src="adminCtrl.js"></script>
+  <script type="text/javascript" src="songCtrl.js"></script>
+  <script type="text/javascript" src="pageCtrl.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
 </html>
