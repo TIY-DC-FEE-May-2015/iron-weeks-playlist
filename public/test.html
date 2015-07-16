@@ -12,17 +12,25 @@
 
   <div ng-controller="PageController"> <!-- just for using vents -->
 
-    <div class="header">
-      Let's play some fucking songs!
-<!--      <a href="#song">Go to Song</a>
-      <a href="#list">Go to List</a>
-      <a href="#admin">Go to Admin </a> -->
-    </div>
-
     <div ng-view><!-- sets up the content - this is where template goes-->
     </div>
 
-    <a href="#admin"><div class="admin">GEAR</div></a>
+   <div class="song-container" ng-controller="SongController">
+    <div class="song-info" >
+      <div>
+        Title: <span ng-bind="song.title"></span>
+      </div>
+      <div>
+        Artist: <span ng-bind="song.artist"></span>
+      </div>
+    </div>
+    <div class="control-panel">
+      <div class="play-pause" ng-click="playPause()">
+        <!-- {{ (isPlaying ? "Pause" :"Play" ) }} -->
+        > / I I   
+      </div>
+      <span class="advance" ng-click="advanceTrack(song, $index)"> >> </span>
+    </div>
 
   </div>
 

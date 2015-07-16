@@ -12,6 +12,8 @@ angular.module("listCtrl", [])
   }*/
   
 
+
+
 //needs a delay
   if ($routeParams.id) {
     var id = parseInt($routeParams.id)

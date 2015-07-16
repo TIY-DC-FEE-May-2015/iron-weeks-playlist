@@ -1,21 +1,11 @@
 <div class="landing-container">
 
+  <a ng-hide="admin" href="#admin"><div class="admin">GEAR</div></a>
 
-  <div class="song-container" ng-controller="SongController">
-    <div class="song-info" ng-show="song.title">
-      <div>
-        Title: <span ng-bind="song.title"></span>
-      </div>
-      <div>
-        Artist: <span ng-bind="song.artist"></span>
-      </div>
+    <div class="header">
+      Let's Play Some Honking Songs!<br>
     </div>
-    <div class="control-panel">
-      <button ng-click="playPause()">
-        {{ (isPlaying ? "Pause" :"Play" ) }}
-      </button>
-      <span class="advance" ng-click="advanceTrack(song, $index)"> >> </span>
-    </div>
+    
   </div>
 
     <div class="list-container" ng-controller="ListController">
@@ -30,6 +20,6 @@
       </div>
       <div class="artist">{{song.artist}}</div>
     </div>
-
+    
   </div>
 </div>

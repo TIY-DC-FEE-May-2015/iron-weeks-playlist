@@ -1,13 +1,7 @@
 angular.module("songCtrl",[])
   .controller("SongController", function($scope, $routeParams){
-  //$scope.title = "Something Title"
+
   //use route params for specific song url - tells us about our route i guess
-  
-  /*$scope.clickButton = function(){
-    //this is an event - goes up to parent
-    $scope.$emit("clicked:button", 42)
-  }
-  */
 
   //now we've added Howler (in theory)
   var howlSong
