@@ -3,11 +3,18 @@ angular.module("pageCtrl", [])
   .controller("PageController", function($scope){
     //moved here and it worked
       //put here so there's more central access
+
+
     $scope.songs = [
       {
       title: "Alone At Night",
       artist: "Psychic Rites",
       url: "/assets/Psychic Rites - Alone At Night.mp3"
+      },
+      {
+        title: "Laser Blasts - Club Remix",
+        artist: "Sound bible",
+        url: "assets/Laser-Blasts.mp3"
       },
       {
       title: "Chateau Lobby #4 (in C for Two Virgins)",
@@ -48,7 +55,7 @@ angular.module("pageCtrl", [])
         title: "Moaning Lisa Smile",
         artist: "Wolf Alice",
         url: "assets/wolf_alice_-_moaning_lisa_smile.mp3"
-      }
+      },
     ]
 
     //now set {{page}} when a click event happens
@@ -67,4 +74,8 @@ angular.module("pageCtrl", [])
     /*$scope.$on("get:songs", function(){
       $scope.$broadcast("get:songs")
     })*/
+
+    $scope.adminToggle = function(){
+      $scope.admin = !$scope.admin
+    }
   })

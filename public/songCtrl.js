@@ -8,23 +8,25 @@ angular.module("songCtrl",[])
 
   //listen for song change and update
   $scope.$on("change:song", function(x, song, index){
-    console.log(arguments)
     //if current, stop
     if (howlSong) {
       howlSong.pause()
     }
-
+    if (song) {
     //$scope.title = song.title
-    $scope.song = song
-    $scope.songIndex = index
+      $scope.song.active = false
+      $scope.song = song
+      $scope.songIndex = index
+    }
+
+    $scope.song.active = true
 
     howlSong = new Howl({
-      urls: [ song.url ], //gets passed in from List Controller
+      urls: [ $scope.song.url ], 
       onend: function() {
-        var nextIndex = $scope.songIndex+1
-        var nextSong = $scope.songs[nextIndex]
-        $scope.$emit("change:song", nextSong, nextIndex)
-        //still need to update the player
+        $scope.advanceTrack()
+        //updates the player view
+        $scope.$digest()
       }
     }).play()
 //set up a property for playPause to be functioning
@@ -43,8 +45,13 @@ angular.module("songCtrl",[])
   $scope.song={}
 
   $scope.advanceTrack = function() {
-        var nextIndex = $scope.songIndex+1
-        var nextSong = $scope.songs[nextIndex]
-        $scope.$emit("change:song", nextSong, nextIndex)
+    $scope.song.active = false
+    $scope.songIndex++
+    if ($scope.songIndex >= $scope.songs.length) {
+      $scope.songIndex = 0
     }
+    $scope.song = $scope.songs[$scope.songIndex]
+    $scope.$emit("change:song")
+    $scope.$digest()
+  }
 })

@@ -4,6 +4,11 @@ angular.module("adminCtrl", [])
   //$scope.admin = true // just to test
   //send a call for somngs - but don't need
   //$scope.$emit("get:songs")
+
+  $scope.deleteOption = function(song, index){
+    song.delete = !song.delete
+  }
+
   $scope.deleteSong = function(song, index){
     $scope.songs.splice(index,1) //this works bc it has connection to parrent
   }
@@ -15,6 +20,10 @@ angular.module("adminCtrl", [])
       title: $scope.title,
       url: $scope.url
     }
+
+    $scope.artist=""
+    $scope.title=""
+    $scope.url =""
 
     $scope.songs.push(newsong)
   }

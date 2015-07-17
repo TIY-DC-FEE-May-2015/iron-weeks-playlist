@@ -15,7 +15,7 @@
     <div ng-view><!-- sets up the content - this is where template goes-->
     </div>
 
-   <div class="song-container" ng-controller="SongController">
+   <div class="song-container" ng-class="{admin: (admin === true)}" ng-controller="SongController">
     <div class="song-info" >
       <div>
         Title: <span ng-bind="song.title"></span>
