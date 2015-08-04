@@ -2,6 +2,8 @@
 
 A simple audio-player interface perfect for currating a weekly playlist. 
 
+Preview working version at <a href="http://younglearnersguide.com/playlist.html">http://younglearnersguide.com/playlist.html</a>
+
 Includes:
 
 * Angular
