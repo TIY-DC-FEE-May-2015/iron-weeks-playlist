@@ -7,29 +7,24 @@ angular.module("pageCtrl", [])
 
     $scope.songs = [
       {
-      title: "Alone At Night",
-      artist: "Psychic Rites",
-      url: "/assets/Psychic Rites - Alone At Night.mp3"
+        title: "Alone At Night",
+        artist: "Psychic Rites",
+        url: "/assets/Psychic Rites - Alone At Night.mp3"
       },
       {
-        title: "Laser Blasts - Club Remix",
-        artist: "Sound bible",
-        url: "assets/Laser-Blasts.mp3"
+        title: "Chateau Lobby #4 (in C for Two Virgins)",
+        artist: "Father John Misty",
+        url: "/assets/father_john_misty_-_chateau_lobby_4_in_c_for_two_virgins.mp3"
       },
       {
-      title: "Chateau Lobby #4 (in C for Two Virgins)",
-      artist: "Father John Misty",
-      url: "/assets/father_john_misty_-_chateau_lobby_4_in_c_for_two_virgins.mp3"
+        title: "Billions of Eyes",
+        artist: "Lady Lamb",
+        url: "/assets/Lady Lamb - Billions of Eyes.mp3",
       },
       {
-      title: "Billions of Eyes",
-      artist: "Lady Lamb",
-      url: "/assets/Lady Lamb - Billions of Eyes.mp3",
-      },
-      {
-      title: "Crawl",
-      artist: "Is Tropical",
-      url: "assets/is_tropical_-_crawl.mp3",
+        title: "Crawl",
+        artist: "Is Tropical",
+        url: "assets/is_tropical_-_crawl.mp3",
       },
       {
         title: "Made Up My Mind",

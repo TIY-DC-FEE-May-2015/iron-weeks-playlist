@@ -10,7 +10,7 @@ angular.module("adminCtrl", [])
   }
 
   $scope.deleteSong = function(song, index){
-    $scope.songs.splice(index,1) //this works bc it has connection to parrent
+    $scope.songs.splice(index,1) //this works bc it has connection to parent
   }
 
   $scope.addSong = function() {
