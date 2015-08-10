@@ -4,37 +4,163 @@
   box-sizing: border-box;
 }
 
-.song {
-  margin-bottom: 20px;
+body {
+  font-family: "Abel";
 }
 
-.song a {
-  text-decoration: none;
-  color: black;
+.header {
+  font-family: 'Audiowide';
+  font-size: 60px;
+  line-height: 52px;
+  letter-spacing: -.08em;
+  width: 40%;
+  margin-left: 9%;
+  margin-bottom: 20px;
+  margin-top: 15vh;
+  padding-bottom: 10px;
+  color: rgba(0,0,0,.8);
+  background: url("assets/loose-tobacco.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .landing-container {
-  font-size: 0px;
+  font-size: 0;
 }
 
 .list-container, .song-container {
-  width: 50%;
   display: inline-block;
   font-size: 20px;
   vertical-align: top;
 }
 
-.admin {
-  font-size: 40px;
+.list-container {
+  width: 40%;
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  cursor: pointer;
-  color: white;
-  text-shadow: 1px 1px #AAA;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  overflow: scroll;
+  background-color: RGB(84, 224, 69)
 }
 
-.admin:hover {
-  color: #EEE;
-  text-shadow: 0px 0px 2px black;
+.song {
+  margin: 20px;
+  padding-bottom: 10px;
+  color: white;
+  text-shadow: 1px 1px RGB(9, 183, 0);
+  border-bottom: solid 1px white;
+  cursor: pointer;
 }
+
+
+
+.song-container {
+  color: white;
+  text-shadow: 1px 1px RGB(9, 183, 0);
+  background: rgb(11, 226, 0);
+  width: 60%;
+  position: absolute;
+  bottom: 0px;
+  transition: height 1s;
+  padding: 20px;
+  text-align: center;
+}
+
+.song-container.admin {
+  background: rgb(255, 113, 0);
+  text-shadow: 1px 1px rgb(255, 156, 0);
+}
+
+.song-info, .control-panel {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.control-panel{
+  cursor: pointer;
+}
+
+.admin-button {
+  font-size: 30px;
+  color: #EEE;
+  cursor: pointer;
+  text-shadow: 1px 1px #ccc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+a .admin-button {
+  text-decoration: none;
+}
+
+.admin-button:hover {
+  color: gray;
+}
+
+.current-list {
+  width: 40%;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  overflow: scroll;
+  background: rgb(255, 155, 79);
+}
+
+.current-list .song {
+  cursor: default;
+}
+
+.song-details {
+  display: inline-block;
+  width: 75%;
+}
+
+.song-marker, .confirm span {
+  cursor: pointer;
+  margin: 0 15px;
+  text-shadow: none;
+  vertical-align: top;
+  display: inline-block;
+}
+
+confirm span {
+  text-decoration: underline;
+}
+
+.new-song {
+  margin-left: 9%;
+  font-size: 15px;
+}
+
+input {
+  margin: 3px 0;
+  padding: 3px;
+  border-top: none;
+  font-size: 14px;
+  width: 35%;
+}
+
+#add-button {
+  font-family: "Audiowide";
+  font-size: 15px;
+  width: 35%;
+  padding: 3px;
+  background: rgb(255, 135, 43);
+  color: white;
+  text-shadow: 1px 2px 1px darkslategray;
+}
+
+.confirm {
+  background: rgba(0,0,0, .5);
+  position: absolute;
+  transform: translateY(-77%);
+  width: 100%;
+  padding: 5px 40px;
+  text-align: center;
+  left: 0;
+}
+

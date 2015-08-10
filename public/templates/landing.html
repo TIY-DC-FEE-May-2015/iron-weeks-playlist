@@ -1,32 +1,27 @@
 <div class="landing-container">
-  <div class="list-container" ng-controller="ListController">
 
-    <div class="song" 
-      ng-repeat="song in songs"
-      ng-click="changeSong(song)">
-      <div class="title">
-        {{ song.title }}
-      </div>
-      <div class="artist">{{ song.artist }}</div>
-      
+  <a ng-hide="admin" href="#admin"><div class="admin-button" ng-click="adminToggle()">EDIT</div></a>
+
+    <div class="header">
+      Let's Play Some Honking Songs!<br>
     </div>
-
+    
   </div>
 
-  <div class="song-container" ng-controller="SongController">
-
-    <div ng-show="song.title">
-      <div>
-        Title: <span ng-bind="song.title"></span>
-      </div>
-      <div>
-        Artist: <span ng-bind="song.artist"></span>
+    <div class="list-container" ng-controller="ListController">
+    <div class="song"
+    ng-repeat="song in songs"
+    ng-click="changeSong(song, $index)">
+     <!-- <a href="#song/{{ $index +1}}"> to redirect to the song page; close link below and remove the click event--> 
+      <div class="song-marker"><span ng-show="song.active">▷</span></div>
+      <div class="song-details">   
+        <div class="title">
+        <!--don't need link b/c button  <a href=" {{song.url}}">{{song.title}}</a> -->
+          {{song.title}}
+        </div>
+        <div class="artist">{{song.artist}}</div>
       </div>
     </div>
-
-    <button ng-click="playPause()">
-      {{ (isPlaying ? "Pause" : "Play") }}
-    </button>
-
+    
   </div>
 </div>

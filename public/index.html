@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="playlistApp">
+<head>
+  <title>Playlist App</title>
+  <script src="libs/angular.js"></script>
+  <link rel="stylesheet" type="text/css" href="playlist.css">
+  <link rel="shortcut icon" href="assets/cake.ico" type="image/x-icon" />
+  <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+</head>
+<body >
+
+  <div ng-controller="PageController"> <!-- just for using vents -->
+
+    <div ng-view><!-- sets up the content - this is where template goes-->
+    </div>
+
+   <div class="song-container" ng-class="{admin: (admin === true)}" ng-controller="SongController">
+    <div class="song-info" >
+      <div>
+        Title: <span ng-bind="song.title"></span>
+      </div>
+      <div>
+        Artist: <span ng-bind="song.artist"></span>
+      </div>
+    </div>
+    <div class="control-panel">
+      <div class="play-pause" ng-click="playPause()">
+        <!-- {{ (isPlaying ? "Pause" :"Play" ) }} -->
+        > / I I   
+      </div>
+      <span class="advance" ng-click="advanceTrack(song, $index)"> >> </span>
+    </div>
+
+  </div>
+
+
+  <script src="libs/angular-route.js"></script>
+  <script src="libs/howler.js"></script>
+  <script type="text/javascript" src="listCtrl.js"></script>
+  <script type="text/javascript" src="adminCtrl.js"></script>
+  <script type="text/javascript" src="songCtrl.js"></script>
+  <script type="text/javascript" src="pageCtrl.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
